@@ -1,0 +1,241 @@
+/* Основные переменные цветов (FACEIT использует оранжевый как основной цвет) */
+:root {
+    --primary-color: #fd612c;
+    --primary-dark: #e25520;
+    --background-dark: #1f1f22;
+    --card-bg: #2a2a2e;
+    --text-light: #ffffff;
+    --text-muted: #9e9e9e;
+    --border-color: #3e3e42;
+    --error-color: #ff4f5e;
+    --success-color: #4cd964;
+    --input-bg: #333337;
+  }
+  
+  body {
+    background-color: var(--background-dark);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-light);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .registration-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  }
+  
+  .registration-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .registration-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  
+  .registration-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .half {
+    width: 50%;
+  }
+  
+  label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-light);
+  }
+  
+  input, select {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-light);
+    font-size: 14px;
+    padding: 12px 16px;
+    transition: border-color 0.2s;
+  }
+  
+  input:focus, select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .input-error {
+    border-color: var(--error-color);
+  }
+  
+  .error-text {
+    color: var(--error-color);
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .checkbox input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .checkbox label {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+  
+  .submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+  }
+  
+  .submit-button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .success-message, .error-message {
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  .success-message {
+    background-color: rgba(76, 217, 100, 0.1);
+    color: var(--success-color);
+    border: 1px solid rgba(76, 217, 100, 0.2);
+  }
+  
+  .error-message {
+    background-color: rgba(255, 79, 94, 0.1);
+    color: var(--error-color);
+    border: 1px solid rgba(255, 79, 94, 0.2);
+  }
+  
+  @media (max-width: 600px) {
+    .form-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .half {
+      width: 100%;
+    }
+    
+    .registration-card {
+      padding: 30px 20px;
+    }
+  }
+  /* Стили для селектора типа регистрации */
+.registration-type-selector {
+  display: flex;
+  margin-bottom: 25px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.type-button {
+  flex: 1;
+  padding: 12px;
+  background-color: var(--card-bg);
+  color: var(--text-light);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.type-button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.type-button:hover:not(.active) {
+  background-color: var(--input-bg);
+}
+
+/* Стили для текстовой области */
+.text-area {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-light);
+  font-size: 14px;
+  padding: 12px 16px;
+  min-height: 100px;
+  transition: border-color 0.2s;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.text-area:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}

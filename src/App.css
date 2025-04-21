@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+.create-superuser-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1f1f22;
+  color: #ffffff;
+}
+
+.create-superuser-container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.create-superuser-container button {
+  background-color: #fd612c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-superuser-container button:hover {
+  background-color: #e25520;
+}

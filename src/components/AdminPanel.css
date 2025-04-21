@@ -1,0 +1,168 @@
+/* Основные переменные цветов */
+:root {
+    --primary-color: #fd612c;
+    --primary-dark: #e25520;
+    --background-dark: #1f1f22;
+    --card-bg: #2a2a2e;
+    --text-light: #ffffff;
+    --text-muted: #9e9e9e;
+    --border-color: #3e3e42;
+    --error-color: #ff4f5e;
+    --success-color: #4cd964;
+    --input-bg: #333337;
+  }
+  
+  .admin-panel-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+  }
+  
+  .admin-panel-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .create-organization-section,
+  .organizations-list-section {
+    margin-bottom: 40px;
+  }
+  
+  .create-organization-section h2,
+  .organizations-list-section h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .create-organization-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-light);
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+  
+  .form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+    font-family: inherit;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+  }
+  
+  .submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .submit-button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .error-message {
+    background-color: rgba(255, 79, 94, 0.1);
+    color: var(--error-color);
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .organizations-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .organizations-table th,
+  .organizations-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .organizations-table th {
+    background-color: var(--input-bg);
+    font-weight: 600;
+  }
+  
+  .organizations-table td {
+    font-size: 14px;
+  }
+  
+  .action-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  
+  .action-button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .action-button.delete {
+    background-color: var(--error-color);
+  }
+  
+  .action-button.delete:hover {
+    background-color: #e63946;
+  }
+  
+  @media (max-width: 600px) {
+    .admin-panel-container {
+      padding: 20px;
+    }
+  
+    .organizations-table {
+      font-size: 12px;
+    }
+  
+    .action-button {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  }
